@@ -39,6 +39,7 @@ public:
 		return "ProductAF1T2::method1";
 	}
 };
+
 class ProductAF2T1 : public AbstractProductA
 {
 public:
@@ -55,6 +56,8 @@ public:
 		return "ProductAF2T2::method1";
 	}
 };
+
+//////////////////////////////////////////////////////
 
 class AbstractProductB
 {
@@ -88,7 +91,7 @@ public:
 };
 
 class ConcreteFactory1 :public AbstractFactory
-{
+{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 public:
 	unique_ptr<AbstractProductA> createProductA(ProductAType type) override
 	{

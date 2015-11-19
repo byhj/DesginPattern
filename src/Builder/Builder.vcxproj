@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Builder.h" />
+    <ClInclude Include="Product.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

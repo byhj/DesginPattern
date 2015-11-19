@@ -1,4 +1,5 @@
-#include "Builder.h"
+//#include "Builder.h"
+#include "Product.h"
 #include <iostream>
 
 using namespace std;
@@ -14,10 +15,10 @@ int main()
 	director1.Construct();
 	director2.Construct();
 
-	Product &product1 = builder1.GetProduct();
+	Product &product1 = builder1.GetResult();
 	cout << product1.GetPart() << endl;
 
-	Product &product2 = builder2.GetProduct();
+	Product &product2 = builder2.GetResult();
 	cout << product2.GetPart() << endl;
 
 	cin.get();

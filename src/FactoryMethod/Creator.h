@@ -1,9 +1,40 @@
 #ifndef CREATOR_H
 #define CREATOR_H
 
-#include "Product.h"
 #include <memory>
 #include <iostream>
+#include <string>
+
+enum class ProductType
+{
+	PRODUCT1,
+	PRODUCT2,
+};
+
+class Product
+{
+public:
+	virtual ~Product() {}
+	virtual std::string method() = 0;
+};
+
+class Product1 : public Product
+{
+
+public:
+
+	~Product1() {}
+
+	std::string method() override { return "Product1::method"; }
+};
+
+class Product2 : public Product
+{
+public:
+	~Product2() {}
+	std::string method() override { return "Product2::method"; }
+};
+
 
 class Creator
 {
@@ -16,7 +47,7 @@ public:
 		for (auto type : products)
 		{
 			auto p = FactoryMethod(type);
-			cout << p->method() << endl;
+			std::cout << p->method() << std::endl;
 		}
 	}
 
